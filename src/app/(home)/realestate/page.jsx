@@ -1,10 +1,10 @@
 "use client";
-import RealEstateDropDown from "@/components/realestate/LeftSide/RealestateDropDown/DropDown";
-import RealEstateServices from "@/components/realestate/RightSide/RealEstateServices";
+import RealEstateDropDown from "@/components/Realestate/LeftSide/RealestateDropDown/DropDown";
+import RealEstateServices from "@/components/Realestate/RightSide/RealEstateServices";
 import { FaTimes } from "react-icons/fa";
 import React from "react";
 import MobileNavbarToHome from "@/shared/components/navbar/mobilenavbar/MobileNavbarToHome";
-import PropertyListSection from "@/components/realestate/LeftSide/PropertyListSection";
+import PropertyListSection from "@/components/Realestate/LeftSide/PropertyListSection";
 import { getProperties } from "@/services/realestateService";
 
 const Page = () => {
