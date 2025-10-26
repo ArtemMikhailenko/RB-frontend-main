@@ -2,7 +2,7 @@
 import React from "react";
 import RealEstateServices from "@/components/Realestate/RightSide/RealEstateServices";
 import PostDetails from "@/components/Realestate/Details/PostDetails";
-import ScheduleTour from "@/components/realestate/Details/AppointmentDate";
+import ScheduleTour from "@/components/Realestate/Details/AppointmentDate";
 // import Layout from "@/components/layout";
 import { Heart, HeartIcon, Share2 } from "lucide-react";
 import Link from "next/link";
@@ -28,6 +28,15 @@ const page = () => {
         { label: "Contact" },
         { label: "Call" },
         { image: "/images/realestatewhatsapp.png" },
+      ],
+      media: [
+        {
+          images: [
+            "/images/houseimage.png",
+            "/images/houseimage2.png",
+            "/images/houseimage3.png",
+          ],
+        },
       ],
       cards: [
         {
@@ -59,6 +68,15 @@ const page = () => {
         { label: "Contact" },
         { label: "Call" },
         { image: "/images/whatsappcolordifferent.png" },
+      ],
+      media: [
+        {
+          images: [
+            "/images/houseimage2.png",
+            "/images/houseimage3.png",
+            "/images/houseimage4.png",
+          ],
+        },
       ],
       cards: [
         {
@@ -98,6 +116,15 @@ const page = () => {
         { label: "Contact" },
         { label: "Call" },
         { image: "/images/realestatewhatsapp.png" },
+      ],
+      media: [
+        {
+          images: [
+            "/images/houseimage3.png",
+            "/images/houseimage4.png",
+            "/images/houseimage.png",
+          ],
+        },
       ],
       cards: [
         {
@@ -289,7 +316,7 @@ const page = () => {
       {/* Page Content */}
       <div className="lg:px-10 px-4 flex justify-between gap-10">
         <div className="flex-1">
-          <RealEstateServices cards={cardConfigs[selectedCardIndex].cards} />
+          <RealEstateServices property={cardConfigs[selectedCardIndex]} />
           <div id="details">
             <PostDetails />
           </div>

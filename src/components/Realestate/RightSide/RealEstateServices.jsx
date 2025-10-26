@@ -36,7 +36,7 @@ const RealEstateServices = ({ property }) => {
       </div>
 
       {/* Kitchen Image */}
-      {property.media[0]?.images &&
+      {property?.media?.[0]?.images && property.media[0].images.length > 0 && (
       <div className="relative sm:block hidden w-full h-[400px]">
         <Image
           src={property?.media[0]?.images?.[0] || "/images/placeholder.png"}
@@ -57,9 +57,9 @@ const RealEstateServices = ({ property }) => {
           </button>
         </div>
       </div>
-}
+      )}
       {/* Secondary Images */}
-      {property.media[0]?.images.length > 1 && (
+      {property?.media?.[0]?.images && property.media[0].images.length > 1 && (
         <div className="grid grid-cols-2 gap-2 max-sm:hidden py-2 border-b border-gray-200">
           <div className="relative h-[220px] rounded-lg overflow-hidden">
             <Image
