@@ -1,6 +1,6 @@
 "use client";
 import TopNavbar from "@/shared/components/navbar/Header";
-import { AuthProvider, useAuth } from "@/context/AuthContext";
+import { AuthProvider, useAuth } from "@/Context/AuthContext";
 import Navbar from "@/shared/components/navbar/Navbar";
 
 function InnerNavbar() {
