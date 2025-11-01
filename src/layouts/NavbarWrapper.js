@@ -5,8 +5,8 @@ import Navbar from "@/shared/components/navbar/Navbar";
 
 export default function NavbarWrapper() {
   const ctx = useAuth();
-  // Safety guard in case provider is not mounted for some reason
-  if (!ctx) return null;
+  // Safety guard: if provider не смонтирован, показываем гостевой Navbar
+  if (!ctx) return <Navbar />;
   const { user, loading } = ctx;
   if (loading) return null;
   return user ? <TopNavbar /> : <Navbar />;
