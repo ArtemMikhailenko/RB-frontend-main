@@ -47,6 +47,8 @@ export default function ChatPage() {
   useEffect(() => {
     if (loading) return;
     const socket = getSocket();
+    // На всякий случай регистрируем пользователя на сокете
+    if (selfId) socket.emit('register', selfId);
 
     const onConnect = () => setConnected(true);
     const onDisconnect = () => setConnected(false);

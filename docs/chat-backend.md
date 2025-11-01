@@ -54,28 +54,30 @@
 - `limit` — по умолчанию 50
 - `offset` — по умолчанию 0
 
-Ответ 200 JSON (массив сообщений, порядок — по времени):
+Ответ 200 JSON (порядок — по времени ASC):
 ```json
-[
-  {
-    "id": "msg-1",
-    "fromUserId": 1,
-    "toUserId": 2,
-    "text": "Hello",
-    "ts": "2025-11-01T10:20:30.000Z",
-    "read": false
-  }
-]
+{
+  "items": [
+    {
+      "id": "msg-1",
+      "fromUserId": 1,
+      "toUserId": 2,
+      "text": "Hello",
+      "ts": "2025-11-01T10:20:30.000Z",
+      "read": false
+    }
+  ]
+}
 ```
 
 ### POST /chat/mark-read (опционально)
 Тело:
 ```json
-{ "peerId": 2, "upTo": "msg-10" }
+{ "peerId": 2, "upTo": "2025-11-01T10:20:30.000Z" }
 ```
 Ответ 200:
 ```json
-{ "ok": true }
+{ "updated": 3 }
 ```
 
 ### (Опционально) GET /chat/conversations
